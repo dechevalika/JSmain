@@ -19,3 +19,54 @@ console.log(null || 2 || undefined ); // выведется 2, т.к. null - fal
 console.log( 1 && null && 2 ); //выведется null, т.к. 1-true, null-false и это первое ложное значение (и возвращает первое ложное значение)
 
 //Задача 3.
+let a = 2;
+let b = 0;
+if (a > 0 &&  b > 0 ) {
+ return (a - b)
+ }
+ else if (a < 0 && b < 0) {
+  c = a*b;
+  console.log (c);
+  }
+ else if (a < 0 && b > 0 || a > 0 && b < 0) {
+  c = a + b;
+console.log (c);
+  }
+
+//Задача 4.
+let a = 8;
+switch (a) {
+		case 1:
+			console.log ('1');
+		case 2:
+			console.log ('2');
+		case 3:
+			console.log ( '3');
+		case 4:
+			console.log ( '4');
+		case 5:
+			console.log ( '5');
+		case 6:
+			console.log ( '6');
+		case 7:
+			console.log ( '7');
+		case 8:
+			console.log ( '8');
+		case 9:
+			console.log ( '9');
+		case 10:
+			console.log ( '10');
+		case 11:
+			console.log ( '11');
+		case 12:
+			console.log ( '12');
+		case 13:
+			console.log ( '13');
+		case 14:
+			console.log ( '14');
+		case 15:
+			console.log ( '15');
+			break;	
+		}
+
+//Задача 5.
