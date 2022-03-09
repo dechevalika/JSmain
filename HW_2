@@ -21,7 +21,6 @@ console.log( 1 && null && 2 ); //выведется null, т.к. 1-true, null-fa
 //Задача 3.
 let a = 2;
 let b = 0;
-
 if (a > 0 &&  b > 0 ) {
  return a - b;
  }
