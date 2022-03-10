@@ -19,19 +19,21 @@ console.log(null || 2 || undefined ); // выведется 2, т.к. null - fal
 console.log( 1 && null && 2 ); //выведется null, т.к. 1-true, null-false и это первое ложное значение (и возвращает первое ложное значение)
 
 //Задача 3.
+
+function calcOperation () {
 let a = 2;
 let b = 0;
 if (a > 0 &&  b > 0 ) {
- return a - b;
+ return a-b;
  }
  else if (a < 0 && b < 0) {
-  c = a*b;
-  console.log (c);
+  return a*b;
   }
  else if (a < 0 && b > 0 || a > 0 && b < 0) {
-  c = a + b;
-console.log (c);
+  return a+b;
   }
+}
+console.log (calcOperation);
 
 //Задача 4.
 let a = 8;
