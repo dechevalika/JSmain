@@ -97,7 +97,32 @@ ${sumAB()}
 ${delAB()}
 `)
 
+//Задача 6.
+ function mathOperation(arg1, arg2, operation) {
+   switch (operation) {
+     case '+':
+       return arg1+arg2;
+     case '-':
+       return arg1-arg2;
+     case '*':
+       return arg1*arg2;
+     case '/':
+       return arg1/arg2;
+   }
+ }
+mathOperation(4, 2, '-');
+
 //Задача 7.
 alert( null > 0 );  //неверно, так как знак сравнения преобразует null в 0
 alert( null == 0 ); // неверно, так как при равенстве null не преобразуется в 0, соответственно они не равны друг другу
 alert( null >= 0 ); //это верное, так как 0 больше либо РАВНО 0, а 0=0
+
+//Задача 8.
+function power(val, pow) {
+  if (pow == 1) {
+    return val; //если степень = 1, то возвращается то же значение аргумента val
+  } else {
+    return val * power(val, pow - 1); //иначе значение val * функцию (вызов рекурсии) пока степень не будет = 1
+  }
+}
+power(3, 2);
