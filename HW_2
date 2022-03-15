@@ -19,21 +19,20 @@ console.log(null || 2 || undefined ); // выведется 2, т.к. null - fal
 console.log( 1 && null && 2 ); //выведется null, т.к. 1-true, null-false и это первое ложное значение (и возвращает первое ложное значение)
 
 //Задача 3.
-
-function calcOperation () {
-let a = 2;
-let b = 0;
-if (a > 0 &&  b > 0 ) {
- return a-b;
- }
- else if (a < 0 && b < 0) {
-  return a*b;
+function calcOperation() {
+  let a = 3;
+  let b = -2;
+  if (a > 0 && b > 0) {
+    return a-b;
   }
- else if (a < 0 && b > 0 || a > 0 && b < 0) {
-  return a+b;
+  else if (a < 0 && b < 0) {
+    return a*b;
+  }
+  else if (a < 0 && b > 0 || a > 0 && b < 0) {
+    return a+b;
   }
 }
-console.log (calcOperation);
+calcOperation();
 
 //Задача 4.
 let a = 8;
@@ -72,6 +71,31 @@ switch (a) {
 		}
 
 //Задача 5.
+let a = 9;
+let b = 3;
+
+function sumAB() {
+   return a+b;
+  }
+
+function raznostAB() {
+   return a-b;
+  }
+
+function umnozhAB() {
+   return a*b;
+  }
+
+function delAB() {
+   return a/b;
+  }
+
+console.log(`
+${raznostAB()}
+${umnozhAB()}
+${sumAB()}
+${delAB()}
+`)
 
 //Задача 7.
 alert( null > 0 );  //неверно, так как знак сравнения преобразует null в 0
