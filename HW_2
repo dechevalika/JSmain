@@ -1,0 +1,128 @@
+//Задача 1.
+let a = 1;
+let b = 1;
+let c;
+let d;
+c = ++a;
+alert(c); // 2, т.к. значение переменной a увеличили на 1 (1+1=2), потому что икремент стоит перед операндом
+d = b++;
+alert(d); // 1, т.к. значение переменной b = 1, а инкремент находится после операнда b, сответственно к b прибавляется 1, но возвращается первоначальное значение
+c = (2+ ++a);
+alert(c); // 5, т.к. в предыдущей операции операнд a стал =2, соответственно, в этой операции операнд стал =3 (2+3=5)
+d = (2+ b++);
+alert(d); // 4, т.к. в предыдущей операции операнд b стал =2, то в этой операции будет =3, но постинеремент вернет значение к 2 (2+2=4)
+alert(a); // 3, т.к. в последнем операнде хранится значение 3, т.е. переменная a содержала значение 1, после выполнения инкремента ++a значение увеличивалось на 1
+alert(b); // 3, т.к. в последнем операнде хранится значение 3, т.е. переменная b содержала значение 1, после выполнения инкремента b++ значение увеличивалось на 1, но возвращало предыдущее значение
+
+//Задача 2.
+console.log(null || 2 || undefined ); // выведется 2, т.к. null - false, 2 - true и это первое истинное значение (или возвращает первое истинное значение)
+console.log( 1 && null && 2 ); //выведется null, т.к. 1-true, null-false и это первое ложное значение (и возвращает первое ложное значение)
+
+//Задача 3.
+function calcOperation() {
+  let a = 3;
+  let b = -2;
+  if (a > 0 && b > 0) {
+    return a-b;
+  }
+  else if (a < 0 && b < 0) {
+    return a*b;
+  }
+  else if (a < 0 && b > 0 || a > 0 && b < 0) {
+    return a+b;
+  }
+}
+calcOperation();
+
+//Задача 4.
+let a = 8;
+switch (a) {
+		case 1:
+			console.log ('1');
+		case 2:
+			console.log ('2');
+		case 3:
+			console.log ( '3');
+		case 4:
+			console.log ( '4');
+		case 5:
+			console.log ( '5');
+		case 6:
+			console.log ( '6');
+		case 7:
+			console.log ( '7');
+		case 8:
+			console.log ( '8');
+		case 9:
+			console.log ( '9');
+		case 10:
+			console.log ( '10');
+		case 11:
+			console.log ( '11');
+		case 12:
+			console.log ( '12');
+		case 13:
+			console.log ( '13');
+		case 14:
+			console.log ( '14');
+		case 15:
+			console.log ( '15');
+			break;	
+		}
+
+//Задача 5.
+let a = 9;
+let b = 3;
+
+function sumAB() {
+   return a+b;
+  }
+
+function raznostAB() {
+   return a-b;
+  }
+
+function umnozhAB() {
+   return a*b;
+  }
+
+function delAB() {
+   return a/b;
+  }
+
+console.log(`
+${raznostAB()}
+${umnozhAB()}
+${sumAB()}
+${delAB()}
+`)
+
+//Задача 6.
+ function mathOperation(arg1, arg2, operation) {
+   switch (operation) {
+     case '+':
+       return arg1+arg2;
+     case '-':
+       return arg1-arg2;
+     case '*':
+       return arg1*arg2;
+     case '/':
+       return arg1/arg2;
+   }
+ }
+mathOperation(4, 2, '-');
+
+//Задача 7.
+alert( null > 0 );  //неверно, так как знак сравнения преобразует null в 0
+alert( null == 0 ); // неверно, так как при равенстве null не преобразуется в 0, соответственно они не равны друг другу
+alert( null >= 0 ); //это верное, так как 0 больше либо РАВНО 0, а 0=0
+
+//Задача 8.
+function power(val, pow) {
+  if (pow == 1) {
+    return val; //если степень = 1, то возвращается то же значение аргумента val
+  } else {
+    return val * power(val, pow - 1); //иначе значение val * функцию (вызов рекурсии) пока степень не будет = 1
+  }
+}
+power(3, 2);
